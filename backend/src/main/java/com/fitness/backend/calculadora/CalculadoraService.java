@@ -23,4 +23,9 @@ public class CalculadoraService {
     public double calcularGET(double tmb, NivelAtividade nivelAtividade) {
         return tmb * nivelAtividade.getFator();
     }
+
+    public double calcularTMBKatchMcArdle(double peso, double percentualGordura) {
+        double massaMagra = peso * (1 - (percentualGordura / 100));
+        return 370 + (21.6 * massaMagra);
+    }
 }

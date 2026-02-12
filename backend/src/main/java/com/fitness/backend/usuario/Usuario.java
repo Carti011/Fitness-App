@@ -37,8 +37,18 @@ public class Usuario {
     @Enumerated(EnumType.STRING)
     private NivelAtividade nivelAtividade;
 
+    private Double percentualGordura;
+
     // Gamification Stats
     private Integer xp = 0;
     private Integer nivel = 1;
     private Integer ofensiva = 0; // dias consecutivos
+    private String ligaAtual = "Bronze";
+    private Long clanId;
+    private LocalDate ultimoTreino;
+
+    // Nutrition
+    private String objetivoNutricional; // PERDA_PESO, GANHO_MASSA, MANTER
+    private String dietaPreferencias; // Ex: "Vegetariano, Sem Gluten"
+    private String alergias; // Ex: "Amendoim, Lactose"
 }
