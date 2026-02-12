@@ -1,9 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { Home, User, Calculator, Dumbbell, Apple } from 'lucide-react';
+import { Home, User, Dumbbell, Apple } from 'lucide-react';
 import GamificationDashboard from './components/GamificationDashboard';
 import BiologyProfile from './components/BiologyProfile';
 import NutritionPlan from './components/NutritionPlan';
-import Calculadora from './components/Calculadora';
 
 function NavBar() {
   const location = useLocation();
@@ -18,9 +17,6 @@ function NavBar() {
       </Link>
       <Link to="/nutricao" style={getLinkStyle(location.pathname === '/nutricao')}>
         <Apple size={20} /> Dieta
-      </Link>
-      <Link to="/calculadora" style={getLinkStyle(location.pathname === '/calculadora')}>
-        <Calculator size={20} /> Calc Antiga
       </Link>
     </nav>
   );
@@ -49,7 +45,6 @@ function App() {
             <Route path="/" element={<GamificationDashboard userId={userId} />} />
             <Route path="/profile" element={<BiologyProfile userId={userId} />} />
             <Route path="/nutricao" element={<NutritionPlan userId={userId} />} />
-            <Route path="/calculadora" element={<Calculadora />} />
           </Routes>
         </main>
       </div>
